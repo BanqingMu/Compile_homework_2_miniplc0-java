@@ -81,21 +81,21 @@ public class Tokenizer {
         while(Character.isAlphabetic(it.peekChar())||Character.isDigit(it.peekChar())){
             temp+=it.nextChar();
         }
-            switch(temp)
-            {
-                case "begin":
-                    return new Token(TokenType.Begin, temp, starts, it.currentPos());
-                case "end":
-                    return new Token(TokenType.End, temp, starts, it.currentPos());
-                case "const":
-                    return new Token(TokenType.Const, temp, starts, it.currentPos());
-                case "var":
-                    return new Token(TokenType.Var, temp, starts, it.currentPos());
-                case "print":
-                    return new Token(TokenType.Print, temp, starts, it.currentPos());
-                default:
-                    return new Token(TokenType.Ident, temp, starts, it.currentPos());
-            }
+        switch(temp)
+        {
+            case "begin":
+                return new Token(TokenType.Begin, temp, starts, it.currentPos());
+            case "end":
+                return new Token(TokenType.End, temp, starts, it.currentPos());
+            case "const":
+                return new Token(TokenType.Const, temp, starts, it.currentPos());
+            case "var":
+                return new Token(TokenType.Var, temp, starts, it.currentPos());
+            case "print":
+                return new Token(TokenType.Print, temp, starts, it.currentPos());
+            default:
+                return new Token(TokenType.Ident, temp, starts, it.currentPos());
+        }
     }
 
     private Token lexOperatorOrUnknown() throws TokenizeError {
