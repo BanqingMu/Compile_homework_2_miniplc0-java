@@ -34,7 +34,7 @@ public final class Analyser {
     }
 
     public List<Instruction> analyse() throws CompileError {
-        analyseProgram();
+//        analyseProgram();
         return instructions;
     }
 
