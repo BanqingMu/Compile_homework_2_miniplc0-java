@@ -361,14 +361,16 @@ public final class Analyser {
             throw new AnalyzeError(ErrorCode.AssignToConstant, /* 当前位置 */ null);
         }
         // 设置符号已初始化
-        initializeSymbol(name, nameToken.getStartPos());
+        initializeSymbol(name, null);
 
         expect(TokenType.Equal);
+
         analyseExpression();
+
         expect(TokenType.Semicolon);
 
         // 把结果保存
-        var offset = getOffset(name, nameToken.getStartPos());
+        var offset = getOffset(name, null);
         instructions.add(new Instruction(Operation.STO, offset));
     }
 
@@ -431,7 +433,7 @@ public final class Analyser {
             // 是标识符
 
             // 加载标识符的值
-            String name = /* 快填 */ (String) expect(TokenType.Ident).getValue();
+            String name = /* 快填 */ (String) next().getValue();
             var symbol = symbolTable.get(name);
             if (symbol == null) {
                 // 没有这个标识符
