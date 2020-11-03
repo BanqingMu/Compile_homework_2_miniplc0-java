@@ -362,10 +362,10 @@ public final class Analyser {
             throw new AnalyzeError(ErrorCode.AssignToConstant, /* 当前位置 */ nameToken.getStartPos());
         }
         expect(TokenType.Equal);
-        // 设置符号已初始化
-        initializeSymbol(name, nameToken.getStartPos());
         analyseExpression();
         expect(TokenType.Semicolon);
+        // 设置符号已初始化
+        initializeSymbol(name, nameToken.getStartPos());
 
         // 把结果保存
         var offset = getOffset(name, nameToken.getStartPos());
@@ -394,7 +394,7 @@ public final class Analyser {
 
         while (true) {
             // 预读可能是运算符的 token
-            Token op = null;
+            Token op = peek();
             if(op.getTokenType()!=TokenType.Mult||op.getTokenType()!=TokenType.Div){
                 break;
             }
