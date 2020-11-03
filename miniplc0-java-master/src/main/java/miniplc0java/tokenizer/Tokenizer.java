@@ -52,8 +52,7 @@ public class Tokenizer {
         String temp="";
         do
         {
-            char next=it.nextChar();
-            temp+=next;
+            temp+=it.nextChar();
         }while(Character.isDigit(it.peekChar()));
         try{
             int value=Integer.parseUnsignedInt(temp);
@@ -77,9 +76,8 @@ public class Tokenizer {
         String temp="";
         do
         {
-            char next=it.nextChar();
-            temp+=next;
-        }while(Character.isLetterOrDigit(it.peekChar()));
+            temp+=it.nextChar();
+        }while(Character.isAlphabetic(it.peekChar())||Character.isDigit(it.peekChar()));
             switch(temp)
             {
                 case "begin":
