@@ -65,7 +65,7 @@
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="miniplc0java.App" />
       <module name="miniplc0java.main" />
-      <option name="PROGRAM_PARAMETERS" value="test.txt -t -o -" />
+      <option name="PROGRAM_PARAMETERS" value="test.txt -l -o -" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -73,6 +73,17 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="miniplc0java.App" />
       <option name="PROGRAM_PARAMETERS" value="test.txt -t -o -" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604411255654</updated>
       <workItem from="1604411257304" duration="1468000" />
-      <workItem from="1604414315896" duration="7906000" />
+      <workItem from="1604414315896" duration="8710000" />
     </task>
     <servers />
   </component>
@@ -106,10 +117,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="218" y="105" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604412725940">
+    <state x="218" y="105" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604423037918">
       <screen x="0" y="0" width="1530" height="902" />
     </state>
-    <state x="218" y="105" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1530.902@0.0.1530.902" timestamp="1604412725940" />
+    <state x="218" y="105" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1530.902@0.0.1530.902" timestamp="1604423037918" />
     <state x="493" y="240" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1604411890848">
       <screen x="0" y="0" width="1530" height="902" />
     </state>
