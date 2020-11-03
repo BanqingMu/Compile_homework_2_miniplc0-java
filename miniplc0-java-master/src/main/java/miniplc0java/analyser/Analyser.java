@@ -309,7 +309,7 @@ public final class Analyser {
         var token = expect(TokenType.Uint);
 
         int value = (int) token.getValue();
-//        System.out.println(value+"here");
+        System.out.println(value+"here1");
         if (negative) {
             value = -value;
         }
@@ -443,7 +443,7 @@ public final class Analyser {
             // 加载整数值
             int value = 0;
             value=(int)expect(TokenType.Uint).getValue();
-//            System.out.println(value+"here");
+            System.out.println(value+"here2");
             instructions.add(new Instruction(Operation.LIT, value));
         } else if (check(TokenType.LParen)) {
             // 是表达式
