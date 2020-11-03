@@ -75,11 +75,11 @@ public class Tokenizer {
         // Token 的 Value 应填写标识符或关键字的字符串
         Pos starts=it.currentPos();
         String temp="";
-//        do
-//        {
-//            char next=it.nextChar();
-//            temp+=next;
-//        }while(Character.isDigit(it.peekChar())||Character.isLetter(it.peekChar()));
+        do
+        {
+            char next=it.nextChar();
+            temp+=next;
+        }while(Character.isLetterOrDigit(it.peekChar()));
             switch(temp)
             {
                 case "begin":
