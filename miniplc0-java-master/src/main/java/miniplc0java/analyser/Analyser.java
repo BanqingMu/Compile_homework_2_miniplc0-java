@@ -354,10 +354,10 @@ public final class Analyser {
         var symbol = symbolTable.get(name);
         if (symbol == null) {
             // 没有这个标识符
-            throw new AnalyzeError(ErrorCode.NotDeclared, /* 当前位置 */ nameToken.getStartPos());
+            throw new AnalyzeError(ErrorCode.NotDeclared, /* 当前位置 */ null);
         } else if (symbol.isConstant) {
             // 标识符是常量
-            throw new AnalyzeError(ErrorCode.AssignToConstant, /* 当前位置 */ nameToken.getStartPos());
+            throw new AnalyzeError(ErrorCode.AssignToConstant, /* 当前位置 */ null);
         }
         // 设置符号已初始化
         initializeSymbol(name, nameToken.getStartPos());
@@ -441,12 +441,12 @@ public final class Analyser {
             // 是整数
             // 加载整数值
             int value = 0;
-            value=(int)expect(TokenType.Uint).getValue();
+            value = (int)expect(TokenType.Uint).getValue();
             instructions.add(new Instruction(Operation.LIT, value));
         } else if (check(TokenType.LParen)) {
             // 是表达式
             // 调用相应的处理函数
-            next();
+            expect(TokenType.LParen);
             analyseExpression();
             expect(TokenType.RParen);
         } else {
