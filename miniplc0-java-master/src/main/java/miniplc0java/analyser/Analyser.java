@@ -290,7 +290,7 @@ public final class Analyser {
             } // 如果遇到其他非终结符的 FIRST 集呢？
              if (peeked.getTokenType() == TokenType.Semicolon) {
                 // 调用相应的分析函数
-                 expect(TokenType.Semicolon);
+                 next();
             } else {
                 // 都不是，摸了
                 break;
@@ -362,6 +362,10 @@ public final class Analyser {
         }
         // 设置符号已初始化
         initializeSymbol(name, nameToken.getStartPos());
+
+        expect(TokenType.Equal);
+        analyseExpression();
+        expect(TokenType.Semicolon);
 
         // 把结果保存
         var offset = getOffset(name, nameToken.getStartPos());
