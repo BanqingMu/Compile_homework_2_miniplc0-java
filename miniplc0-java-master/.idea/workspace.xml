@@ -23,7 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa3926b2-acb9-4036-aed2-8a2742ca83eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/miniplc0java/analyser/Analyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/miniplc0java/analyser/Analyser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604411255654</updated>
       <workItem from="1604411257304" duration="1468000" />
-      <workItem from="1604414315896" duration="14128000" />
+      <workItem from="1604414315896" duration="14713000" />
     </task>
     <servers />
   </component>
@@ -158,5 +157,9 @@
       <screen x="0" y="0" width="1530" height="902" />
     </state>
     <state x="720" y="153" width="700" height="579" key="dock-window-1/0.0.1530.902@0.0.1530.902" timestamp="1604427680831" />
+    <state x="443" y="-18" width="794" height="888" maximized="true" key="dock-window-2" timestamp="1604429046569">
+      <screen x="0" y="0" width="1530" height="902" />
+    </state>
+    <state x="443" y="-18" width="794" height="888" maximized="true" key="dock-window-2/0.0.1530.902@0.0.1530.902" timestamp="1604429046569" />
   </component>
 </project>
